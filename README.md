@@ -71,4 +71,5 @@ A DELETE request is sent to /api/users. The request must contain a header that c
 
 Technologies used: 
 Client: HTML, CSS, JavaScript, React. Deployed using Zeit's Now. 
+
 Server: Express, Bcrypt, Helmet, Knex, Morgan, Heroku Scheduler, Nodemailer, Postgrator, Chai, Mocha, Supertest. Deployed using Heroku. 
