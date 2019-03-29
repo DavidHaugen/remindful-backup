@@ -4,7 +4,7 @@ Remindful
 Live link:
 ----------
 
-[remindful.now.sh](remindful.now.sh)
+[remindful.now.sh](http://remindful.now.sh)
 
 ![Remindful About Page](./screenshots/About.png) 
 
