@@ -11,19 +11,26 @@ Remindful allows users to record and write about their personal goals. On the fi
 Users can add and delete goals. They can also mark goals as completed without deleting them from their list. Users can also add and delete reflections for each goal in their list. Emails are automatically sent out on the first of every month to users using Heroku Scheduler and Nodemailer. Users can easily delete their accounts if they want to stop receiving emails. Finally, there is a demo account that can be accessed from the About page. This account is protected from deletion on both the front and back end. 
 
 About page
-![Remindful about page](./screenshots/About.png) 
+![Remindful about page](./screenshots/About.png)
+
 Sign up page
-![Remindful sign up page](./screenshots/SignUp.png) 
+![Remindful sign up page](./screenshots/SignUp.png)
+
 Log in page
-![Remindful log in page](./screenshots/LogIn.png) 
+![Remindful log in page](./screenshots/LogIn.png)
+
 Goals page
-![Remindful goals page](./screenshots/YourGoals.png) 
+![Remindful goals page](./screenshots/YourGoals.png)
+
 Goal details page
-![Remindful goal details page](./screenshots/GoalDetails.png) 
+![Remindful goal details page](./screenshots/GoalDetails.png)
+
 Account page
-![Remindful account page](./screenshots/Account.png) 
+![Remindful account page](./screenshots/Account.png)
+
 Protected account page
 ![Remindful protected account page](./screenshots/ProtectedAccount.png)
+
 Email sample
 ![Remindful email example](./screenshots/Email.png)  
 
