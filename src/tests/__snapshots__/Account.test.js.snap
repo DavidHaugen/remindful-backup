@@ -3,6 +3,7 @@
 exports[`<Account /> renders the UI as expected 1`] = `
 <div
   className="main"
+  role="main"
 >
   <button
     className="textButton"

@@ -42,6 +42,7 @@ exports[`<App /> renders the UI as expected 1`] = `
   </nav>
   <div
     className="main"
+    role="main"
   >
     <div
       className="wrapper"

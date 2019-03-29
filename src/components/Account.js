@@ -24,7 +24,7 @@ class Account extends Component {
 
     if(this.context.testUser){
       return(
-        <div className="main">
+        <div className="main" role="main">
           <div className="wrapper">
            <p className="description">We really like our test account, so we have limited what you can see on this page. If you really want to delete an account, go make one and come on back.</p>
           </div>
@@ -32,7 +32,7 @@ class Account extends Component {
       )
     } else {
       return (
-        <div className="main">
+        <div className="main" role="main">
           <button className="textButton" onClick={() => this.deleteAccount()}>Delete my account</button>
         </div>
       )

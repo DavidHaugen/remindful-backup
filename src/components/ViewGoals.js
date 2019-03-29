@@ -17,7 +17,7 @@ class ViewGoals extends Component {
   render(){
     if(this.context.loading){
       return(
-        <div className="main">
+        <div className="main" role="main">
           <div className="lds-grid"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
         </div>
       )
@@ -26,7 +26,7 @@ class ViewGoals extends Component {
     if(this.context.goals.length > 0){
 
       return(
-        <div className="main">
+        <div className="main" role="main">
           <div className="wrapper">
             <div role='alert'>
               {this.context.error && <p className='red'>{this.context.error}</p>}
@@ -45,7 +45,7 @@ class ViewGoals extends Component {
       )
 
       }else {return(
-        <div className="main">
+        <div className="main" role="main">
           <div className="wrapper">
             <h1>It looks like you haven't added any goals yet. Click the button below to add your first goal.</h1>
             <Link to='/add-goal'>

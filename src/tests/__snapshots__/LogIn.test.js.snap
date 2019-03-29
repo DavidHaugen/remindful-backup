@@ -3,6 +3,7 @@
 exports[`<LogIn /> renders the UI as expected 1`] = `
 <div
   className="main"
+  role="main"
 >
   <div
     className="wrapper"

@@ -3,6 +3,7 @@
 exports[`<ViewGoals /> renders the UI as expected when no goals are present 1`] = `
 <div
   className="main"
+  role="main"
 >
   <div
     className="wrapper"
@@ -29,6 +30,7 @@ exports[`<ViewGoals /> renders the UI as expected when no goals are present 1`] 
 exports[`<ViewGoals /> renders the UI as expected when no goals are present 2`] = `
 <div
   className="main"
+  role="main"
 >
   <div
     className="wrapper"
@@ -55,6 +57,7 @@ exports[`<ViewGoals /> renders the UI as expected when no goals are present 2`] 
 exports[`<ViewGoals /> renders the UI as expected when there are goals present 1`] = `
 <div
   className="main"
+  role="main"
 >
   <div
     className="wrapper"

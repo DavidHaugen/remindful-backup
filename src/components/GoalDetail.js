@@ -75,13 +75,13 @@ class GoalDetail extends Component {
 
     if(this.context.loading){
       return (
-        <div className="main">
+        <div className="main" role="main">
         <div className="lds-grid"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
       </div>
       )
     } else {
     return (
-      <div className="main">
+      <div className="main" role="main">
         <div className="wrapper">
           <div role='alert'>
             {this.context.error && <p className='red'>{this.context.error}</p>}

@@ -5,7 +5,7 @@ class NotFound extends Component {
 
   render(){
     return (
-      <div className="main">
+      <div className="main" role="main">
         <div className="wrapper">
           <header role="banner" className="banner">
             <h1 className="aboutHeader">Remindful</h1>

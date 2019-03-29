@@ -44,14 +44,14 @@ class SignUp extends Component {
 
     if(this.context.loading){
     return(
-      <div className="main">
+      <div className="main" role="main">
         <div className="lds-grid"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
       </div>
     )
     } else{
 
     return(
-      <div className="main"> 
+      <div className="main" role="main"> 
         <div className="wrapper">
           <h1 className="karla">Welcome to Remindful</h1>
           <p className="instructions">Please enter your email address and password to get started</p>

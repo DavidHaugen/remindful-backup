@@ -22,7 +22,7 @@ class AccountDeleted extends Component {
   
   render(){
     return (
-      <div className="main">
+      <div className="main" role="main">
         <div className="wrapper">
           <h4>{'Your account has been successfully deleted'}</h4>
         </div>

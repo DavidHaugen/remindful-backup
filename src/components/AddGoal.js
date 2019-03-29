@@ -20,7 +20,7 @@ export default class AddGoal extends Component {
     let error = this.context.error;
 
     return (
-      <div className="main">
+      <div className="main" role="main">
         <div className="wrapper">
           <h1>Let's create your new goal</h1>
           <div className="formContainer">
