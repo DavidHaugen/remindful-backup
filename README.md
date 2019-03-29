@@ -23,13 +23,13 @@ Goals page
 ![Remindful goals page](./screenshots/YourGoals.png)
 
 Goal details page
-![Remindful goal details page](./screenshots/GoalDetails.png)
+![Remindful goal details page](./screenshots/GoalDetail.png)
 
 Account page
 ![Remindful account page](./screenshots/Account.png)
 
 Protected account page
-![Remindful protected account page](./screenshots/ProtectedAccount.png)
+![Remindful protected account page](./screenshots/AccountProtected.png)
 
 Email sample
 ![Remindful email example](./screenshots/Email.png)  
