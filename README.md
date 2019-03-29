@@ -1,12 +1,12 @@
 Remindful
 =========
 
-Live:
-----
+Live link:
+----------
 
 [remindful.now.sh](remindful.now.sh)
 
-# 
+![Remindful About Page](./screenshots/About.png) 
 
 # H1
 ## H2
