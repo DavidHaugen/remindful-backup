@@ -10,8 +10,22 @@ class ViewGoals extends Component {
 
   static contextType = GoalsContext
 
+  sortGoals = goals => {
+    return goals.sort(function(a,b){
+      if (a.id > b.id) {
+        return 1;
+      }
+      if (a.id < b.id) {
+        return -1;
+      }
+      // a must be equal to b
+      return 0;
+    })
+  }
+
   createList(goals){
-    return goals.map((goal, i) => <Goal key={i} goal={goal} history={this.props.history}/>)
+    const sortedGoals = this.sortGoals(goals)
+    return sortedGoals.map((goal, i) => <Goal key={i} goal={goal} history={this.props.history}/>)
   };
 
   render(){

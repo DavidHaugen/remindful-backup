@@ -30,6 +30,19 @@ class GoalDetail extends Component {
     this.props.history.push('/my-goals');
   }
 
+  sortReflections = reflections => {
+    return reflections.sort(function(a,b){
+      if (a.date_created < b.date_created) {
+        return 1;
+      }
+      if (a.date_created > b.date_created) {
+        return -1;
+      }
+      // a must be equal to b
+      return 0;
+    })
+  }
+
   deleteReflection = (e) => {
     e.preventDefault();
     this.context.clearError();
@@ -63,8 +76,8 @@ class GoalDetail extends Component {
 
   render(){
     let error;
-
-    const reflections = this.state.reflections.map((reflection, key) =>{ 
+    const sortedReflections = this.sortReflections(this.state.reflections)
+    const reflections = sortedReflections.map((reflection, key) =>{ 
       const date = new Date(reflection.date_created)
       return <li key={key} className="reflection">
           <span className='reflectionDate'>{(date.getMonth() + 1) + '/' + date.getDate() + '/' +  date.getFullYear()}</span><span className='reflectionContent'>{reflection.content}</span>
