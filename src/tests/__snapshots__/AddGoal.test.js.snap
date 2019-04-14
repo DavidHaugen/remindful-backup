@@ -33,6 +33,7 @@ exports[`<AddGoal /> renders the UI as expected 1`] = `
           <input
             className="inputField"
             id="name"
+            maxLength="55"
             required={true}
             type="text"
           />

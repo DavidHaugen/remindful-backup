@@ -101,7 +101,11 @@ exports[`<ViewGoals /> renders the UI as expected when there are goals present 1
             }
           }
         >
-          test
+          <p
+            className="overflowEl"
+          >
+            test
+          </p>
         </li>
       </div>
       <div
@@ -115,7 +119,11 @@ exports[`<ViewGoals /> renders the UI as expected when there are goals present 1
             }
           }
         >
-          test2
+          <p
+            className="overflowEl"
+          >
+            test2
+          </p>
         </li>
       </div>
     </ul>

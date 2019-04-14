@@ -41,8 +41,10 @@ exports[`<LogIn /> renders the UI as expected 1`] = `
             className="inputField"
             id="login_email_address"
             name="email_address"
+            onChange={[Function]}
             required={true}
             type="email"
+            value=""
           />
         </div>
         <div
@@ -58,8 +60,10 @@ exports[`<LogIn /> renders the UI as expected 1`] = `
             className="inputField"
             id="password"
             name="password"
+            onChange={[Function]}
             required={true}
             type="password"
+            value=""
           />
         </div>
         <button

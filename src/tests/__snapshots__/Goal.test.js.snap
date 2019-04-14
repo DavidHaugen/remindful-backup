@@ -12,7 +12,11 @@ exports[`<Goal /> renders the UI as expected 1`] = `
       }
     }
   >
-    test
+    <p
+      className="overflowEl"
+    >
+      test
+    </p>
   </li>
 </div>
 `;

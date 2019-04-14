@@ -46,8 +46,10 @@ exports[`<SignUp /> renders the UI as expected 1`] = `
             className="inputField"
             id="signUp_first_name"
             name="first_name"
+            onChange={[Function]}
             required={true}
             type="text"
+            value=""
           />
         </div>
         <div
@@ -63,8 +65,10 @@ exports[`<SignUp /> renders the UI as expected 1`] = `
             className="inputField"
             id="signUp_last_name"
             name="last_name"
+            onChange={[Function]}
             required={true}
             type="text"
+            value=""
           />
         </div>
         <div
@@ -80,8 +84,10 @@ exports[`<SignUp /> renders the UI as expected 1`] = `
             className="inputField"
             id="signUp_email_address"
             name="email_address"
+            onChange={[Function]}
             required={true}
             type="email"
+            value=""
           />
         </div>
         <div
@@ -97,8 +103,10 @@ exports[`<SignUp /> renders the UI as expected 1`] = `
             className="inputField"
             id="password"
             name="password"
+            onChange={[Function]}
             required={true}
             type="password"
+            value=""
           />
         </div>
         <button

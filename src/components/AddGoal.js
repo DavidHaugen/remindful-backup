@@ -30,7 +30,7 @@ export default class AddGoal extends Component {
               </div>
               <div className="formField">
                 <label htmlFor="name" className="inputLabel">Name</label>
-                  <input type='text' id = 'name' required className="inputField" ></input>
+                  <input type='text' id = 'name' required className="inputField" maxLength='55'></input>
                 <button type='submit'><i className="fas fa-plus-circle addGoalButton"></i></button>
               </div>
             </form>

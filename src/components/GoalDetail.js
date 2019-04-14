@@ -102,7 +102,7 @@ class GoalDetail extends Component {
           <div className="goalTitle">
             <h1 className={
               (goal) ? 
-              goal.complete ? 'complete' : 'inProgress' :
+              goal.complete ? 'complete overflowEl' : 'inProgress overflowEl' :
               null}>{
               (goal) ? 
               goal.name : null}</h1>
@@ -122,7 +122,7 @@ class GoalDetail extends Component {
               </div>
               <div className="formField">
                 <label htmlFor="reflectionsInput" id="addReflectionLabel" className="inputLabel">Reflection</label>
-                <input id='reflectionsInput' name='reflectionsInput' className="inputField" required></input>
+                <input id='reflectionsInput' name='reflectionsInput' className="inputField" maxLength='55' required></input>
                 <button type='submit' ><i className="fas fa-plus-circle" id="reflectionButton" type="button"></i></button>
               </div>
             </form>

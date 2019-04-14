@@ -24,6 +24,16 @@ width: 90%;
   align-items: center;
   font-size: 20px;
   margin-top: 10px;
+  overflow: hidden;
+  white-space: nowrap; 
+
+}
+
+.overflowEl{
+  white-space: nowrap; 
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 20px;
 }
 
 .goal:nth-child(even){

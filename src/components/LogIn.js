@@ -11,7 +11,17 @@ class LogIn extends Component {
   static contextType = GoalsContext
 
   state = { 
+    email: '',
+    pass: '',
     error: null}
+
+    updateEmail = email => {
+      this.setState({email})
+    }
+  
+    updatePass = pass => {
+      this.setState({pass})
+    }
 
   handleSubmitJwtAuth = ev => {
     ev.preventDefault()
@@ -59,11 +69,11 @@ class LogIn extends Component {
             </div>
             <div className='formField'>
               <label htmlFor="login_email_address" className="inputLabel">Email</label>
-                <input name='email_address' type='email' id='login_email_address' className="inputField" required/>
+                <input name='email_address' type='email' id='login_email_address' className="inputField" required value={this.state.email} onChange={(e) => {this.updateEmail(e.target.value)}}/>
             </div>
             <div className='formField'>
               <label htmlFor="password" className="inputLabel">Password</label>
-                <input name='password' type='password' id='password' className="inputField" required/>
+                <input name='password' type='password' id='password' className="inputField" required value={this.state.pass} onChange={(e) => {this.updatePass(e.target.value)}}/>
             </div>
             <button type='submit' className="textButton login">Log in</button>
           </form>

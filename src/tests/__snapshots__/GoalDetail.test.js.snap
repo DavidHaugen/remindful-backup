@@ -15,7 +15,7 @@ exports[`<GoalDetail /> renders the UI as expected 1`] = `
       className="goalTitle"
     >
       <h1
-        className="inProgress"
+        className="inProgress overflowEl"
       >
         test
       </h1>
@@ -64,6 +64,7 @@ exports[`<GoalDetail /> renders the UI as expected 1`] = `
           <input
             className="inputField"
             id="reflectionsInput"
+            maxLength="55"
             name="reflectionsInput"
             required={true}
           />

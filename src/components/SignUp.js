@@ -2,17 +2,38 @@ import React, { Component } from 'react'
 import AuthApiService from '../services/auth-api-service'
 import { Link } from 'react-router-dom'
 import '../styles/SignUp.css'
+import TokenService from '../services/token-service'
 import GoalsContext from '../context/GoalsContext'
 
 class SignUp extends Component {
+  state = {
+    first: '',
+    last: '',
+    email: '',
+    pass: '',
+    error: null
+  }
   static defaultProps = {
     onRegistrationSuccess: () => {}
   }
 
   static contextType = GoalsContext
 
-  state = { 
-    error: null }
+  updateFirst = first => {
+    this.setState({first})
+  }
+
+  updateLast = last => {
+    this.setState({last})
+  }
+
+  updateEmail = email => {
+    this.setState({email})
+  }
+
+  updatePass = pass => {
+    this.setState({pass})
+  }
 
   handleSubmit = ev => {
     ev.preventDefault()
@@ -25,19 +46,29 @@ class SignUp extends Component {
       first_name: first_name.value,
       last_name: last_name.value,
     })
-      .then(() => {
-        first_name.value = ''
-        last_name.value = ''
-        email_address.value = ''
-        password.value = ''
-        this.props.history.push('/my-goals')
-        this.context.loadingFalse()
-      })
       .catch(res => {
-        this.setState({ error: res.error })
+        this.setState({ error: res.error})
         this.context.loadingFalse()
       })
-  }
+      .then(() => {
+              AuthApiService.postLogin({
+                email_address: email_address.value,
+                password: password.value,
+              })
+                .then(res => {
+                  email_address.value = ''
+                  password.value = ''
+                  TokenService.saveAuthToken(res.authToken)
+                  this.props.history.push('/my-goals')
+                  this.context.getGoals()
+                  this.context.loadingFalse()
+                  })
+                  .catch(res => {
+                    this.setState({ error: res.error})
+                    this.context.loadingFalse()
+                  })
+  })
+}
 
   render(){
     const { error } = this.state
@@ -63,19 +94,19 @@ class SignUp extends Component {
               </div>
               <div className='formField'>
                 <label className="inputLabel" htmlFor="signUp_first_name">First name</label>
-                  <input name='first_name' type='text' id='signUp_first_name' className="inputField" required />
+                  <input name='first_name' type='text' id='signUp_first_name' className="inputField" required value={this.state.first} onChange={(e) => {this.updateFirst(e.target.value)}}/>
               </div>
               <div className='formField'>
                 <label className="inputLabel" htmlFor="signUp_last_name">Last name</label>
-                  <input name='last_name' type='text' id='signUp_last_name' className="inputField" required/>
+                  <input name='last_name' type='text' id='signUp_last_name' className="inputField" required value={this.state.last} onChange={(e) => {this.updateLast(e.target.value)}}/>
               </div>
               <div className='formField'>
                 <label className="inputLabel" htmlFor="signUp_email_address">Email</label>
-                  <input name='email_address' type='email' id='signUp_email_address' className="inputField" required/>
+                  <input name='email_address' type='email' id='signUp_email_address' className="inputField" required value={this.state.email} onChange={(e) => {this.updateEmail(e.target.value)}}/>
               </div>
               <div className='formField'>
                 <label className="inputLabel" htmlFor="password">Password</label>
-                  <input name='password' type='password' id='password' className="inputField" required/>
+                  <input name='password' type='password' id='password' className="inputField" required value={this.state.pass} onChange={(e) => {this.updatePass(e.target.value)}}/>
               </div>
               <button type='submit' className="textButton login">Sign up</button>
             </form>
